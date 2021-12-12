@@ -1,0 +1,8 @@
+#anajyzer/v1
+ {:src-paths ["src" "test"]
+  :analyzers [cwchriswilliams.analyzers.line-count-analyzer/line-count-analyzer
+              cwchriswilliams.analyzers.top-level-form-count-analyzer/top-level-forms-count-analyzer
+              cwchriswilliams.analyzers.reference-count-analyzer/reference-count-analyzer
+              cwchriswilliams.analyzers.form-frequency-analyzer/form-frequency-analyzer]
+  :reporters [cwchriswilliams.reporters.stdout-reporter/report cwchriswilliams.reporters.json-reporter/report]
+  :output-path "tmp/output.json"}
